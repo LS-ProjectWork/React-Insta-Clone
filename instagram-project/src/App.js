@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import dummyData from './dummy-Data'
 
 class App extends Component {
   render() {
