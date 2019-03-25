@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentSection from './components/CommentSection/CommentSection'
 
 const PostContainer = props => {
     console.log(props.data)
@@ -12,6 +13,7 @@ const PostContainer = props => {
                         <img src={post.imageUrl}/>
                         <p>{post.likes}</p>
                         <p>{post.timestamp}</p>
+                        <CommentSection data={post.comments}/>
                     </div>
                 )
             })}
