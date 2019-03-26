@@ -7,13 +7,13 @@ const PostContainer = props => {
         <div>
             {props.data.map(post => {
                 return(
-                    <div className='post-header'>
+                    <div key={post.id} className='post-header'>
                         <img src={post.thumbnailUrl} alt='profile-picture'/>
                         <h2>{post.username}</h2>
                         <img src={post.imageUrl} alt='post-image'/>
                         <p>{post.likes}</p>
                         <p>{post.timestamp}</p>
-                        <CommentSection data={post.comments}/>
+                        <CommentSection key={post.id} data={post.comments}/>
                     </div>
                 )
             })}
