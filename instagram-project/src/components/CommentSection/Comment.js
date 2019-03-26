@@ -7,8 +7,8 @@ const Comment = props =>  {
                 {props.data.map(comment => {
                     return (
                         <div key={comment.id}>
-                            {comment.username}
-                            {comment.text}
+                            <span>{comment.username}</span>
+                            <span>{comment.text}</span>
                         </div>
                     )
                 })}
@@ -17,4 +17,4 @@ const Comment = props =>  {
     )
 }
 
-export default Coment
+export default Comment
