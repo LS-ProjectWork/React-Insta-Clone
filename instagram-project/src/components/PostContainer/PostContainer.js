@@ -8,9 +8,9 @@ const PostContainer = props => {
             {props.data.map(post => {
                 return(
                     <div key={post.id} className='post-header'>
-                        <img src={post.thumbnailUrl} alt='profile-picture'/>
+                        <img src={post.thumbnailUrl} alt='profile'/>
                         <h2>{post.username}</h2>
-                        <img src={post.imageUrl} alt='post-image'/>
+                        <img src={post.imageUrl} alt='post'/>
                         <p>{post.likes}</p>
                         <p>{post.timestamp}</p>
                         <CommentSection key={post.id} data={post.comments}/>
