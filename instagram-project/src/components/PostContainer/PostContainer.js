@@ -2,7 +2,6 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection'
 
 const PostContainer = props => {
-    console.log(props.data)
     return (
         <div>
             {props.data.map(post => {
@@ -13,7 +12,7 @@ const PostContainer = props => {
                         <img src={post.imageUrl} alt='post'/>
                         <p>{post.likes}</p>
                         <p>{post.timestamp}</p>
-                        <CommentSection data={post.comments}/>
+                        <CommentSection />
                     </div>
                 )
             })}
