@@ -13,7 +13,7 @@ const PostContainer = props => {
                         <img src={post.imageUrl} alt='post'/>
                         <p>{post.likes}</p>
                         <p>{post.timestamp}</p>
-                        <CommentSection key={post.id} data={post.comments}/>
+                        <CommentSection data={post.comments}/>
                     </div>
                 )
             })}
