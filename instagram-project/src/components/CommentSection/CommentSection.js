@@ -1,18 +1,18 @@
 import React from 'react';
+import Comment from './Comment'
 
-const CommentSection = props => {
-    return (
-        <div>
-            {props.data.map(comment => {
-                return (
-                    <div key={comment.id}>
-                        {comment.username}
-                        {comment.text}
-                    </div>
-                )
-            })}
-        </div>
-    )
+class CommentSection extends React.Component {
+    state = {comments: props.comments}
+
+    render() {
+        return (
+            <div>
+                {this.state.map(comment => {
+                    return <Comment comment={this.state.comments} />
+                })}
+            </div>
+        )
+    }
 }
 
 export default CommentSection
