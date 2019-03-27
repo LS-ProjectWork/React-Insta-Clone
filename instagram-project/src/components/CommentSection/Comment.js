@@ -11,3 +11,10 @@ const Comment = props =>  {
 }
 
 export default Comment;
+
+Comment.propTypes = {
+    comments: arrayOf(
+        PropTypes.shape({username = PropTypes.string, 
+        comment = PropTypes.string
+    }))
+}
