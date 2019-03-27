@@ -4,7 +4,11 @@ import SearchBar from '../SearchBar/SearchBar';
 import dummyData from '../../dummy-data';
 
 class PostsPage extends React.Component {
-    state = {data: []};
+  constructor(props) {
+    super(props)
+    this.state = {data: []};
+    this.props = props;
+  }
 
   componentDidMount() {
   this.setState({data: dummyData})
@@ -15,6 +19,7 @@ class PostsPage extends React.Component {
         }
         return (
           <div className="App">
+            <button onClick={this.props.logout}>Log Out</button>
             <SearchBar />
             <PostContainer data={this.state.data} />
           </div>
