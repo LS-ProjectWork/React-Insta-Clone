@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types'; 
 
 const Comment = props =>  {
-    console.log(props)
     return (
         <div>
             <span>{props.comment.username}</span>
@@ -13,8 +13,8 @@ const Comment = props =>  {
 export default Comment;
 
 Comment.propTypes = {
-    comments: arrayOf(
-        PropTypes.shape({username = PropTypes.string, 
-        comment = PropTypes.string
+    comments: PropTypes.arrayOf(
+        PropTypes.shape({username: PropTypes.string, 
+        comment: PropTypes.string
     }))
 }
