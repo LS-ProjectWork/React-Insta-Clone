@@ -7,3 +7,5 @@ const withAuthenticate = Component => class ClassComponent extends React.Compone
         )
     }
 }
+
+export default withAuthenticate;
